@@ -1,0 +1,55 @@
+html {
+  height: 100%;
+}
+
+/* Center grid. */
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+/* Make grid have a max width of 960px and add margins. */
+#grid {
+  min-width: 960px;
+  min-height: 960px;
+  display: flex;
+  /* Makes elements skip to next line if elements overflow. */
+  flex-wrap: wrap;
+  margin: 25px 100px;
+  padding: 0px;
+}
+
+.square {
+  border: 2px solid black;
+  /* Calculates height/width with border. */
+  box-sizing: border-box;
+}
+
+.square:before {
+	content: "";
+	float: left;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+
+/* fixed position of the button and styled it. */
+#resetGrid {
+  border: 3px solid black;
+  border-radius: 12px;
+  position: fixed;
+  padding: 8px;
+  top: 30px;
+  left: 2px;
+  font-size: 15px;
+}
+
+/* Special effects of the button. */
+#resetGrid:hover {
+  background-color: chartreuse;
+}
+
+#resetGrid:active {
+  box-shadow: 0 3px 0 #00823F;
+  top: 25px;
+}
