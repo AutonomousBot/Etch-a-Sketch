@@ -39,5 +39,17 @@ function randomColors() { 
   return randomColorValue;
 }
 
+// Add event to button
+const button = document.getElementById("resetGrid");
+button.onclick = clearGrid;
+// Clear grid for a reset.
+function clearGrid() {  document.getElementById("grid").innerHTML = "" 
+  // Prompt user for new grid size. 
+  promptGrid(); 
+  // Create grid. 
+  gridSquares(); 
+  hoverDraw();
+}
+
 gridSquares();
 hoverDraw();
