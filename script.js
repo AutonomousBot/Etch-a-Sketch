@@ -53,9 +53,13 @@ function clearGrid() {  document.getElementById("grid").innerHTML = "" 
 
 function promptGrid() { 
   gridSize = prompt("Enter a number of squares per side for the grid (less or equal to 100).") 
-  while (gridSize > 100) {gridSize = prompt("Enter a number of squares per side for the grid (less or equal to 100).")} 
+  while (gridSize > 100) {
+    gridSize = prompt("Enter a number of squares per side for the grid (less or equal to 100).")
+  } 
   // Display grid again by showing borders. 
-  for (let i = 0; i < blankSquare.length; i++) {blankSquare[i].style.borderStyle = "solid";}
+  for (let i = 0; i < blankSquare.length; i++) {
+    blankSquare[i].style.borderStyle = "solid";
+  }
 }
 
 gridSquares();
